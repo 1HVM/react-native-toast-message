@@ -4,6 +4,7 @@ import { Animated, PanResponder } from 'react-native';
 import SuccessToast from './components/success';
 import ErrorToast from './components/error';
 import InfoToast from './components/info';
+import WarningToast from './components/warning';
 import { complement } from './utils/arr';
 import { includeKeys } from './utils/obj';
 import styles from './styles';
@@ -19,6 +20,9 @@ const defaultComponentsConfig = {
   ),
   info: ({ hide, text1, text2 }) => (
     <InfoToast onClose={hide} text1={text1} text2={text2} />
+  ),
+  warning: ({ hide, text1, text2 }) => (
+    <WarningToast onClose={hide} text1={text1} text2={text2} />
   )
 };
 
